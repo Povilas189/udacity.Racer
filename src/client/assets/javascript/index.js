@@ -391,4 +391,13 @@ function accelerate(id) {
   // POST request to `${SERVER}/api/races/${id}/accelerate`
   // options parameter provided as defaultFetchOpts
   // no body or datatype needed for this request
+  const raceId = parseInt(id);
+  try {
+    await fetch(`${SERVER}/api/races/${raceId}/accelerate`, {
+      method: 'POST',
+      ...defaultFetchOpts(),
+    });
+  } catch (error) {
+    console.log("error with accelerate Api request::", error);
+  }
 }
