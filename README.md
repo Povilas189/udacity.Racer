@@ -34,20 +34,21 @@ To run the server, locate your operating system and run the associated command i
 
 | Your OS               | Command to start the API                                  |
 | --------------------- | --------------------------------------------------------- |
-| Mac                   | `ORIGIN_ALLOWED=http://localhost:3000 ./bin/server-osx`   |
-| Windows               | `ORIGIN_ALLOWED=http://localhost:3000 ./bin/server.exe`   |
-| Linux (Ubuntu, etc..) | `ORIGIN_ALLOWED=http://localhost:3000 ./bin/server-linux` |
+| Mac                   | `./bin/server-osx ORIGIN_ALLOWED=http://localhost:3000`   |
+| Windows               | `./bin/server.exe ORIGIN_ALLOWED=http://localhost:3000`   |
+| Linux (Ubuntu, etc..) | `./bin/server-linux ORIGIN_ALLOWED=http://localhost:3000` |
 
 Note that this process will use your terminal tab, so you will have to open a new tab and navigate back to the project root to start the front end.
 
 #### WINDOWS USERS -- Setting Environment Variables
+
 If you are using a windows machine:
-1. `cd` into the root of the project containing data.json 
+
+1. `cd` into the root of the project containing data.json
 2. Run the following command to add the environment variable:
-```set DATA_FILE=./data.json```
+   `set DATA_FILE=./data.json`
 
 If you still run into issues running the API server on your machine, you can run this project in the Udacity classroom.
-
 
 ### Start the Frontend
 
