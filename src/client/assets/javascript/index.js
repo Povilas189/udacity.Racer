@@ -35,6 +35,17 @@ function setupClickHandlers() {
     function (event) {
       const { target } = event;
 
+      let parent = event.target.parentElement;
+
+      // Race track form field
+      if (parent.matches(".card.track")) {
+        handleSelectTrack(parent);
+      }
+
+      // Podracer form field
+      if (parent.matches(".card.podracer")) {
+        handleSelectPodRacer(parent);
+      }
       // Race track form field
       if (target.matches(".card.track")) {
         handleSelectTrack(target);
@@ -44,7 +55,6 @@ function setupClickHandlers() {
       if (target.matches(".card.podracer")) {
         handleSelectPodRacer(target);
       }
-
       // Submit create race form
       if (target.matches("#submit-create-race")) {
         event.preventDefault();
